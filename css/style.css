@@ -4,12 +4,11 @@
 }
 
 html {
-  color: white;
-  background-color: black;
+  color: #050505;
   font-family: "Inter", sans-serif;
   font-size: 12px;
 }
-html body {
+html body header {
   margin: 18px;
 }
 html body nav {
@@ -17,8 +16,29 @@ html body nav {
   margin-bottom: 32px;
 }
 
+.graphic-wrapper {
+  color: white;
+  background-color: #050505;
+  height: 97vh;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.graphic-wrapper::after {
+  box-sizing: border-box;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  left: 50%;
+  width: 105%;
+  border: 40px solid white;
+  border-top-right-radius: 100%;
+  border-top-left-radius: 100%;
+  transform: translate(-50%, 40px);
+}
+
 .btn {
-  color: black;
   background-color: white;
   border: none;
   border-radius: 8px;
@@ -30,6 +50,10 @@ html body nav {
 h1 {
   font-size: 48px;
   margin-bottom: 24px;
+}
+
+h2 {
+  font-size: 24px;
 }
 
 p {

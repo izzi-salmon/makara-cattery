@@ -1,27 +1,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+$black: #050505;
+
 * {
     margin: 0;
 }
 
 html {
-    color: white;
-    background-color: black;
+    color: $black;
     font-family: "Inter", sans-serif;
     font-size: 12px;
 
     body {
-        margin: 18px;
+        header {
+            margin: 18px;
+        }
         nav {
             text-align: right;
             margin-bottom: 32px;
         }
     }
-    
+}
+
+.graphic-wrapper {
+    color: white;
+    background-color: $black;
+    height: 97vh;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    &::after {
+        box-sizing: border-box;
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 50%;
+        left: 50%;
+        width: 105%;
+        border: 40px solid white;
+        border-top-right-radius: 100%;
+        border-top-left-radius: 100%;
+        transform: translate(-50%, 40px);
+    }
 }
 
 .btn {
-    color: black;
     background-color: white;
     border: none;
     border-radius: 8px;
@@ -33,6 +56,10 @@ html {
 h1 {
     font-size: 48px;
     margin-bottom: 24px;
+}
+
+h2 {
+    font-size: 24px;
 }
 
 p {
