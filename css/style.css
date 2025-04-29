@@ -32,12 +32,31 @@ html body .graphic-wrapper::after {
 html body .graphic-wrapper header {
   margin: 18px;
 }
+@media only screen and (min-width: 600px) {
+  html body .graphic-wrapper header {
+    margin: 32px 64px;
+  }
+}
+html body .graphic-wrapper header .title-content {
+  max-width: 444px;
+}
+@media only screen and (min-width: 600px) {
+  html body .graphic-wrapper header .title-content p {
+    font-size: 1.5rem;
+    line-height: 24px;
+  }
+}
 html body .graphic-wrapper header nav {
   text-align: right;
   margin-bottom: 32px;
 }
 html body main {
-  margin: 0 18px 42px;
+  margin: 18px;
+}
+@media only screen and (min-width: 600px) {
+  html body main {
+    margin: 32px 64px;
+  }
 }
 html body main section {
   margin-bottom: 24px;
@@ -48,12 +67,20 @@ html body main section .sub-section {
 html body footer {
   background-color: #050505;
   color: white;
-  padding: 28px 18px;
+  display: flex;
 }
-html body footer .footer-section {
+html body footer .footer-main-content {
+  margin: 18px;
+}
+@media only screen and (min-width: 600px) {
+  html body footer .footer-main-content {
+    margin: 32px 64px;
+  }
+}
+html body footer .footer-main-content .footer-section {
   margin-bottom: 24px;
 }
-html body footer .footer-section a {
+html body footer .footer-main-content .footer-section a {
   color: white;
 }
 
@@ -69,6 +96,12 @@ html body footer .footer-section a {
 h1 {
   font-size: 48px;
   margin-bottom: 24px;
+}
+@media only screen and (min-width: 600px) {
+  h1 {
+    font-size: 96px;
+    margin-bottom: 48px;
+  }
 }
 
 h2 {

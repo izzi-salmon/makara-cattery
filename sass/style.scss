@@ -3,6 +3,13 @@
 $black: #050505;
 $grey: #393737;
 
+@mixin page-margin {
+    margin: 18px;
+    @media only screen and (min-width: 600px)  {
+        margin: 32px 64px;
+    }
+}
+
 * {
     margin: 0;
 }
@@ -34,7 +41,16 @@ html {
                 transform: translate(-50%, 40px);
             }
             header {
-                margin: 18px;
+                @include page-margin;
+                .title-content{
+                    max-width: 444px;
+                    @media only screen and (min-width: 600px) {
+                        p {
+                            font-size: 1.5rem;
+                            line-height: 24px;
+                        }
+                    }
+                }
                 nav {
                     text-align: right;
                     margin-bottom: 32px;
@@ -42,7 +58,7 @@ html {
             }
         }
         main {
-            margin: 0 18px 42px; // TODO: bottom margin not reflecting actual value?
+            @include page-margin;
             section {
                 margin-bottom: 24px;
                 .sub-section{
@@ -53,11 +69,14 @@ html {
         footer {
             background-color: $black;
             color: white;
-            padding: 28px 18px;
-            .footer-section{
-                margin-bottom: 24px;
-                a {
-                    color: white;
+            display: flex; // Why doesn't display block work?
+            .footer-main-content{
+                @include page-margin;
+                .footer-section{
+                    margin-bottom: 24px;
+                    a {
+                        color: white;
+                    }
                 }
             }
         }
@@ -76,6 +95,10 @@ html {
 h1 {
     font-size: 48px;
     margin-bottom: 24px;
+    @media only screen and (min-width: 600px) {
+        font-size: 96px;
+        margin-bottom: 48px;
+    }
 }
 
 h2 {
