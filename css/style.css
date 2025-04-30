@@ -8,6 +8,11 @@ html {
   font-family: "Inter", sans-serif;
   font-size: 12px;
 }
+@media only screen and (min-width: 600px) {
+  html {
+    font-size: 16px;
+  }
+}
 html body .graphic-wrapper {
   color: white;
   background-color: #050505;
@@ -37,14 +42,14 @@ html body .graphic-wrapper header {
     margin: 32px 64px;
   }
 }
+@media only screen and (min-width: 800px) {
+  html body .graphic-wrapper header {
+    margin: 52px auto;
+    max-width: 740px;
+  }
+}
 html body .graphic-wrapper header .title-content {
   max-width: 444px;
-}
-@media only screen and (min-width: 600px) {
-  html body .graphic-wrapper header .title-content p {
-    font-size: 1.5rem;
-    line-height: 24px;
-  }
 }
 html body .graphic-wrapper header nav {
   text-align: right;
@@ -58,6 +63,12 @@ html body main {
     margin: 32px 64px;
   }
 }
+@media only screen and (min-width: 800px) {
+  html body main {
+    margin: 52px auto;
+    max-width: 740px;
+  }
+}
 html body main section {
   margin-bottom: 24px;
 }
@@ -67,7 +78,8 @@ html body main section .sub-section {
 html body footer {
   background-color: #050505;
   color: white;
-  display: flex;
+  display: inline-block;
+  width: 100%;
 }
 html body footer .footer-main-content {
   margin: 18px;
@@ -77,11 +89,14 @@ html body footer .footer-main-content {
     margin: 32px 64px;
   }
 }
+@media only screen and (min-width: 800px) {
+  html body footer .footer-main-content {
+    margin: 52px auto;
+    max-width: 740px;
+  }
+}
 html body footer .footer-main-content .footer-section {
   margin-bottom: 24px;
-}
-html body footer .footer-main-content .footer-section a {
-  color: white;
 }
 
 .btn {
@@ -94,28 +109,29 @@ html body footer .footer-main-content .footer-section a {
 }
 @media only screen and (min-width: 600px) {
   .btn {
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding: 12px 20px;
   }
 }
 
 h1 {
-  font-size: 48px;
+  font-size: 4rem;
   margin-bottom: 24px;
 }
 @media only screen and (min-width: 600px) {
   h1 {
-    font-size: 96px;
+    font-size: 6rem;
     margin-bottom: 48px;
   }
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 2rem;
   margin-bottom: 12px;
 }
 
 h3 {
+  font-size: 1.5rem;
   margin-bottom: 8px;
 }
 
@@ -129,6 +145,11 @@ h4 {
 p {
   font-size: 1rem;
   margin-bottom: 8px;
+  line-height: 1.5rem;
+}
+
+a {
+  color: inherit;
 }
 
 .text--grey {

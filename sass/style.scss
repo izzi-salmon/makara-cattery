@@ -8,6 +8,10 @@ $grey: #393737;
     @media only screen and (min-width: 600px)  {
         margin: 32px 64px;
     }
+    @media only screen and (min-width: 800px)  {
+        margin: 52px auto; //166px margin
+        max-width: 740px;
+    }
 }
 
 * {
@@ -18,6 +22,9 @@ html {
     color: $black;
     font-family: "Inter", sans-serif;
     font-size: 12px;
+    @media only screen and (min-width: 600px) {
+        font-size: 16px;
+    }
 
     body {
         .graphic-wrapper {
@@ -44,12 +51,6 @@ html {
                 @include page-margin;
                 .title-content{
                     max-width: 444px;
-                    @media only screen and (min-width: 600px) {
-                        p {
-                            font-size: 1.5rem;
-                            line-height: 24px;
-                        }
-                    }
                 }
                 nav {
                     text-align: right;
@@ -69,14 +70,12 @@ html {
         footer {
             background-color: $black;
             color: white;
-            display: flex; // Why doesn't display block work?
+            display: inline-block; // Why doesn't display block work?
+            width: 100%;
             .footer-main-content{
                 @include page-margin;
                 .footer-section{
                     margin-bottom: 24px;
-                    a {
-                        color: white;
-                    }
                 }
             }
         }
@@ -91,26 +90,27 @@ html {
     font-size: 1rem;
     font-weight: 700;
     @media only screen and (min-width: 600px) {
-        font-size: 2rem;
+        font-size: 1.5rem;
         padding: 12px 20px;
     }
 }
 
 h1 {
-    font-size: 48px;
+    font-size: 4rem;
     margin-bottom: 24px;
     @media only screen and (min-width: 600px) {
-        font-size: 96px;
+        font-size: 6rem;
         margin-bottom: 48px;
     }
 }
 
 h2 {
-    font-size: 24px;
+    font-size: 2rem;
     margin-bottom: 12px;
 }
 
 h3{
+    font-size: 1.5rem;
     margin-bottom: 8px;
 }
 
@@ -124,6 +124,11 @@ h4{
 p {
     font-size: 1rem;
     margin-bottom: 8px;
+    line-height: 1.5rem;
+}
+
+a{
+    color: inherit;
 }
 
 .text--grey {
