@@ -6,6 +6,7 @@
 html {
   color: #050505;
   font-family: "Inter", sans-serif;
+  font-kerning: none;
   font-size: 12px;
 }
 @media only screen and (min-width: 600px) {
@@ -17,9 +18,20 @@ html body .graphic-wrapper {
   color: white;
   background-color: #050505;
   height: 85vh;
+  min-height: fit-content;
   overflow: hidden;
   position: relative;
   width: 100%;
+}
+@media only screen and (min-width: 600px) {
+  html body .graphic-wrapper {
+    height: 90vh;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  html body .graphic-wrapper {
+    height: 96vh;
+  }
 }
 html body .graphic-wrapper::after {
   box-sizing: border-box;
@@ -30,9 +42,21 @@ html body .graphic-wrapper::after {
   left: 50%;
   width: 105%;
   border: 40px solid white;
-  border-top-right-radius: 100%;
-  border-top-left-radius: 100%;
-  transform: translate(-50%, 40px);
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  transform: translate(-50%, 50px);
+}
+@media only screen and (min-width: 600px) {
+  html body .graphic-wrapper::after {
+    border: 60px solid white;
+    transform: translate(-50%, 75px);
+  }
+}
+@media only screen and (min-width: 1024px) {
+  html body .graphic-wrapper::after {
+    border: 80px solid white;
+    transform: translate(-50%, 100px);
+  }
 }
 html body .graphic-wrapper header {
   margin: 18px;
@@ -42,38 +66,61 @@ html body .graphic-wrapper header {
     margin: 32px 64px;
   }
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1024px) {
   html body .graphic-wrapper header {
     margin: 52px auto;
     max-width: 740px;
   }
 }
+@media only screen and (min-width: 1200px) {
+  html body .graphic-wrapper header {
+    max-width: 1040px;
+    width: 70vw;
+  }
+}
 html body .graphic-wrapper header .title-content {
   max-width: 444px;
+  padding-bottom: 64px;
 }
 html body .graphic-wrapper header nav {
   text-align: right;
   margin-bottom: 32px;
 }
+@media only screen and (min-width: 1024px) {
+  html body .graphic-wrapper header nav {
+    height: 32px;
+  }
+  html body .graphic-wrapper header nav button {
+    position: absolute;
+    right: 52px;
+  }
+}
 html body main {
   margin: 18px;
+  margin-bottom: 46px;
 }
 @media only screen and (min-width: 600px) {
   html body main {
     margin: 32px 64px;
   }
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1024px) {
   html body main {
     margin: 52px auto;
     max-width: 740px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  html body main {
+    max-width: 1040px;
+    width: 70vw;
   }
 }
 html body main section {
   margin-bottom: 24px;
 }
 html body main section .sub-section {
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 html body footer {
   background-color: #050505;
@@ -89,10 +136,16 @@ html body footer .footer-main-content {
     margin: 32px 64px;
   }
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1024px) {
   html body footer .footer-main-content {
     margin: 52px auto;
     max-width: 740px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  html body footer .footer-main-content {
+    max-width: 1040px;
+    width: 70vw;
   }
 }
 html body footer .footer-main-content .footer-section {
@@ -104,6 +157,7 @@ html body footer .footer-main-content .footer-section {
   border: none;
   border-radius: 8px;
   padding: 5px 10px;
+  font-family: inherit;
   font-size: 1rem;
   font-weight: 700;
 }
@@ -114,20 +168,26 @@ html body footer .footer-main-content .footer-section {
   }
 }
 
+p {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  margin-bottom: 0.8rem;
+  line-height: 1.5rem;
+}
+
 h1 {
   font-size: 4rem;
-  margin-bottom: 24px;
+  margin-bottom: 2rem;
 }
 @media only screen and (min-width: 600px) {
   h1 {
     font-size: 6rem;
-    margin-bottom: 48px;
   }
 }
 
 h2 {
   font-size: 2rem;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
 h3 {
@@ -135,17 +195,11 @@ h3 {
   margin-bottom: 8px;
 }
 
-h4 {
+.heading--sub-heading {
   color: #393737;
   margin-bottom: 8px;
   font-weight: normal;
   text-transform: uppercase;
-}
-
-p {
-  font-size: 1rem;
-  margin-bottom: 8px;
-  line-height: 1.5rem;
 }
 
 a {
@@ -154,6 +208,20 @@ a {
 
 .text--grey {
   color: #393737;
+}
+
+.text--after-graphic {
+  margin-top: -10px;
+}
+@media only screen and (min-width: 600px) {
+  .text--after-graphic {
+    margin-top: -20px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .text--after-graphic {
+    margin-top: -40px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
