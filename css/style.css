@@ -58,41 +58,86 @@ html body .graphic-wrapper::after {
     transform: translate(-50%, 100px);
   }
 }
-html body .graphic-wrapper header {
+html body .header--home {
   margin: 18px;
 }
 @media only screen and (min-width: 600px) {
-  html body .graphic-wrapper header {
+  html body .header--home {
     margin: 32px 64px;
   }
 }
 @media only screen and (min-width: 1024px) {
-  html body .graphic-wrapper header {
+  html body .header--home {
     margin: 52px auto;
     max-width: 740px;
   }
 }
 @media only screen and (min-width: 1200px) {
-  html body .graphic-wrapper header {
+  html body .header--home {
     max-width: 1040px;
     width: 70vw;
   }
 }
-html body .graphic-wrapper header .title-content {
+html body .header--home .title-content {
   max-width: 444px;
   padding-bottom: 64px;
 }
-html body .graphic-wrapper header nav {
+html body .header--home nav {
   text-align: right;
   margin-bottom: 32px;
 }
 @media only screen and (min-width: 1024px) {
-  html body .graphic-wrapper header nav {
+  html body .header--home nav {
     height: 32px;
   }
-  html body .graphic-wrapper header nav button {
+  html body .header--home nav button {
     position: absolute;
     right: 52px;
+  }
+}
+html body .header--page {
+  background-color: #050505;
+  color: white;
+  display: inline-block;
+  width: 100%;
+}
+html body .header--page nav {
+  margin: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media only screen and (min-width: 600px) {
+  html body .header--page nav {
+    margin: 32px 64px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  html body .header--page nav {
+    margin: 52px auto;
+    max-width: 740px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  html body .header--page nav {
+    max-width: 1040px;
+    width: 70vw;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  html body .header--page nav {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+}
+html body .header--page nav .nav_heading {
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+@media only screen and (min-width: 1024px) {
+  html body .header--page nav .nav_heading {
+    font-size: 3rem;
   }
 }
 html body main {
@@ -182,14 +227,8 @@ p {
 }
 
 h1 {
-  font-size: 4rem;
-  margin-bottom: 2rem;
-}
-@media only screen and (min-width: 600px) {
-  h1 {
-    font-size: 6rem;
-    margin-bottom: 3rem;
-  }
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
 }
 
 h2 {
@@ -204,6 +243,17 @@ h3 {
 
 h4 {
   font-size: 1rem;
+}
+
+.heading--page-title {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+@media only screen and (min-width: 600px) {
+  .heading--page-title {
+    font-size: 6rem;
+    margin-bottom: 3rem;
+  }
 }
 
 .heading--sub-heading {

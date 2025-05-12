@@ -3,6 +3,7 @@
 $black: #050505;
 $grey: #393737;
 
+// TODO: name screen break sizes
 @mixin page-margin {
     margin: 18px;
     @media only screen and (min-width: 600px)  {
@@ -68,7 +69,10 @@ html {
 
                 }
             }
-            header {
+        }
+
+        .header {
+            &--home {
                 @include page-margin;
                 .title-content {
                     max-width: 444px;
@@ -86,7 +90,32 @@ html {
                     }
                 }
             }
+            &--page {
+                background-color: $black;
+                color: white;
+                display: inline-block;
+                width: 100%;
+                nav {
+                    @include page-margin;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    @media only screen and (min-width: 1024px) {
+                        margin-top: 24px;
+                        margin-bottom: 24px;
+                    }
+                    .nav_heading {
+                        font-size: 2rem;
+                        font-weight: bold;
+                        text-decoration: none;
+                        @media only screen and (min-width: 1024px) {
+                            font-size: 3rem;
+                        }
+                    }
+                }
+            }
         }
+
         main {
             @include page-margin;
             margin-bottom: 46px;
@@ -138,12 +167,8 @@ p {
 }
 
 h1 {
-    font-size: 4rem;
-    margin-bottom: 2rem;
-    @media only screen and (min-width: 600px) {
-        font-size: 6rem;
-        margin-bottom: 3rem;
-    }
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
 }
 
 h2 {
@@ -160,7 +185,16 @@ h4 {
     font-size: 1rem;
 }
 
-.heading--sub-heading{
+.heading--page-title {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    @media only screen and (min-width: 600px) {
+        font-size: 6rem;
+        margin-bottom: 3rem;
+    }
+}
+
+.heading--sub-heading {
     color: $grey;
     margin-bottom: 0.8rem;
     font-weight: normal;
