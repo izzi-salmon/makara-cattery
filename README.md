@@ -3,4 +3,4 @@ makarasass = run sass compiler
 
 Currently:
 
-- Test rem spacing vs px spacing for typography
+- Change page-margins to only be left & right margins, organise top and bottom margins

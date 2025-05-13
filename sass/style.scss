@@ -2,15 +2,22 @@
 
 $black: #050505;
 $grey: #393737;
+$mobile-page-margin: 18px;
 
 // TODO: name screen break sizes
 @mixin page-margin {
-    margin: 18px;
+    // margin: 18px;
+    margin-left: $mobile-page-margin;
+    margin-right: $mobile-page-margin;
     @media only screen and (min-width: 600px)  {
-        margin: 32px 64px;
+        // margin: 32px 64px;
+        margin-left: 64px;
+        margin-right: 64px;
     }
     @media only screen and (min-width: 1024px)  {
-        margin: 52px auto; //166px margin
+        // margin: 52px auto;
+        margin-left: auto;
+        margin-right: auto;
         max-width: 740px;
     }
     @media only screen and (min-width: 1200px) {
@@ -74,6 +81,10 @@ html {
         .header {
             &--home {
                 @include page-margin;
+                margin-top: $mobile-page-margin;
+                @media only screen and (min-width: 600px) {
+                    margin-top: 32px;
+                }
                 .title-content {
                     max-width: 444px;
                     padding-bottom: 64px; // Important for landscape device: retain ideal space between title-content and graphic-wrapper::after
@@ -98,8 +109,10 @@ html {
                 nav {
                     @include page-margin;
                     display: flex;
-                    justify-content: space-between;
-                    align-items: center;
+                        justify-content: space-between;
+                        align-items: center;
+                    margin-top: $mobile-page-margin;
+                    margin-bottom: $mobile-page-margin;
                     @media only screen and (min-width: 1024px) {
                         margin-top: 24px;
                         margin-bottom: 24px;
@@ -116,17 +129,20 @@ html {
             }
         }
 
-        main {
+        .main {
             @include page-margin;
-            margin-bottom: 46px;
+            margin-top: 32px;
+            margin-bottom: 64px;
+            &--home {
+                margin-top: 18px; // TODO: organise all margin sizes between devices
+            }
+            
             section {
-                margin-bottom: 24px;
                 margin-bottom: 2rem;
                 @media only screen and (min-width: 1200px) {
                     margin-bottom: 56px;
                 }
                 .sub-section{
-                    margin-bottom: 16px;
                     margin-bottom: 1.3rem;
                 }
             }
@@ -136,8 +152,18 @@ html {
             color: white;
             display: inline-block; // Why doesn't display block work?
             width: 100%;
-            .footer-main-content{
+            .footer_main-content{ // TODO: rename bedmas or wtf it's called
                 @include page-margin;
+                margin-top: $mobile-page-margin;
+                margin-bottom: $mobile-page-margin;
+                @media only screen and (min-width: 600px) {
+                    margin-top: 64px;
+                    margin-bottom: 64px;
+                }
+                @media only screen and (min-width: 1024px) {
+                    margin-top: 64px;
+                    margin-bottom: 64px;
+                }
                 .footer-section{
                     margin-bottom: 24px;
                 }
@@ -210,12 +236,12 @@ a {
 }
 
 // Reduce top margin of text below the graphic since the graphic includes whitespace
-.text--after-graphic {
-    margin-top: -10px;
-    @media only screen and (min-width: 600px) {
-        margin-top: -20px;
-    }
-    @media only screen and (min-width: 1024px) {
-        margin-top: -40px;
-    }
-}
+// .text--after-graphic {
+//     margin-top: -10px;
+//     @media only screen and (min-width: 600px) {
+//         margin-top: -20px;
+//     }
+//     @media only screen and (min-width: 1024px) {
+//         margin-top: -40px;
+//     }
+// }

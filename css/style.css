@@ -59,16 +59,20 @@ html body .graphic-wrapper::after {
   }
 }
 html body .header--home {
-  margin: 18px;
+  margin-left: 18px;
+  margin-right: 18px;
+  margin-top: 18px;
 }
 @media only screen and (min-width: 600px) {
   html body .header--home {
-    margin: 32px 64px;
+    margin-left: 64px;
+    margin-right: 64px;
   }
 }
 @media only screen and (min-width: 1024px) {
   html body .header--home {
-    margin: 52px auto;
+    margin-left: auto;
+    margin-right: auto;
     max-width: 740px;
   }
 }
@@ -76,6 +80,11 @@ html body .header--home {
   html body .header--home {
     max-width: 1040px;
     width: 70vw;
+  }
+}
+@media only screen and (min-width: 600px) {
+  html body .header--home {
+    margin-top: 32px;
   }
 }
 html body .header--home .title-content {
@@ -102,19 +111,24 @@ html body .header--page {
   width: 100%;
 }
 html body .header--page nav {
-  margin: 18px;
+  margin-left: 18px;
+  margin-right: 18px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 18px;
+  margin-bottom: 18px;
 }
 @media only screen and (min-width: 600px) {
   html body .header--page nav {
-    margin: 32px 64px;
+    margin-left: 64px;
+    margin-right: 64px;
   }
 }
 @media only screen and (min-width: 1024px) {
   html body .header--page nav {
-    margin: 52px auto;
+    margin-left: auto;
+    margin-right: auto;
     max-width: 740px;
   }
 }
@@ -140,38 +154,43 @@ html body .header--page nav .nav_heading {
     font-size: 3rem;
   }
 }
-html body main {
-  margin: 18px;
-  margin-bottom: 46px;
+html body .main {
+  margin-left: 18px;
+  margin-right: 18px;
+  margin-top: 32px;
+  margin-bottom: 64px;
 }
 @media only screen and (min-width: 600px) {
-  html body main {
-    margin: 32px 64px;
+  html body .main {
+    margin-left: 64px;
+    margin-right: 64px;
   }
 }
 @media only screen and (min-width: 1024px) {
-  html body main {
-    margin: 52px auto;
+  html body .main {
+    margin-left: auto;
+    margin-right: auto;
     max-width: 740px;
   }
 }
 @media only screen and (min-width: 1200px) {
-  html body main {
+  html body .main {
     max-width: 1040px;
     width: 70vw;
   }
 }
-html body main section {
-  margin-bottom: 24px;
+html body .main--home {
+  margin-top: 18px;
+}
+html body .main section {
   margin-bottom: 2rem;
 }
 @media only screen and (min-width: 1200px) {
-  html body main section {
+  html body .main section {
     margin-bottom: 56px;
   }
 }
-html body main section .sub-section {
-  margin-bottom: 16px;
+html body .main section .sub-section {
   margin-bottom: 1.3rem;
 }
 html body footer {
@@ -180,27 +199,44 @@ html body footer {
   display: inline-block;
   width: 100%;
 }
-html body footer .footer-main-content {
-  margin: 18px;
+html body footer .footer_main-content {
+  margin-left: 18px;
+  margin-right: 18px;
+  margin-top: 18px;
+  margin-bottom: 18px;
 }
 @media only screen and (min-width: 600px) {
-  html body footer .footer-main-content {
-    margin: 32px 64px;
+  html body footer .footer_main-content {
+    margin-left: 64px;
+    margin-right: 64px;
   }
 }
 @media only screen and (min-width: 1024px) {
-  html body footer .footer-main-content {
-    margin: 52px auto;
+  html body footer .footer_main-content {
+    margin-left: auto;
+    margin-right: auto;
     max-width: 740px;
   }
 }
 @media only screen and (min-width: 1200px) {
-  html body footer .footer-main-content {
+  html body footer .footer_main-content {
     max-width: 1040px;
     width: 70vw;
   }
 }
-html body footer .footer-main-content .footer-section {
+@media only screen and (min-width: 600px) {
+  html body footer .footer_main-content {
+    margin-top: 64px;
+    margin-bottom: 64px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  html body footer .footer_main-content {
+    margin-top: 64px;
+    margin-bottom: 64px;
+  }
+}
+html body footer .footer_main-content .footer-section {
   margin-bottom: 24px;
 }
 
@@ -269,20 +305,6 @@ a {
 
 .text--grey {
   color: #393737;
-}
-
-.text--after-graphic {
-  margin-top: -10px;
-}
-@media only screen and (min-width: 600px) {
-  .text--after-graphic {
-    margin-top: -20px;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  .text--after-graphic {
-    margin-top: -40px;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */
