@@ -2,25 +2,29 @@
 
 $black: #050505;
 $grey: #393737;
-$mobile-page-margin: 18px;
+$mobile-margin: 18px;
+$tablet-margin: 52px;
+$laptop-margin: 64px;
+
+// Breakpoint screen sizes
+$tablet: 600px;
+$laptop: 1024px;
+$largeScreen: 1200px;
 
 // TODO: name screen break sizes
 @mixin page-margin {
-    // margin: 18px;
-    margin-left: $mobile-page-margin;
-    margin-right: $mobile-page-margin;
-    @media only screen and (min-width: 600px)  {
-        // margin: 32px 64px;
-        margin-left: 64px;
-        margin-right: 64px;
+    margin-left: $mobile-margin;
+    margin-right: $mobile-margin;
+    @media only screen and (min-width: $tablet)  {
+        margin-left: $tablet-margin;
+        margin-right: $tablet-margin;
     }
-    @media only screen and (min-width: 1024px)  {
-        // margin: 52px auto;
+    @media only screen and (min-width: $laptop)  {
         margin-left: auto;
         margin-right: auto;
         max-width: 740px;
     }
-    @media only screen and (min-width: 1200px) {
+    @media only screen and (min-width: $largeScreen) {
         max-width: 1040px;
         width: 70vw;
     }
@@ -35,7 +39,7 @@ html {
     font-family: "Inter", sans-serif;
     font-kerning: none; // Fixes uggers kerning
     font-size: 12px;
-    @media only screen and (min-width: 600px) {
+    @media only screen and (min-width: $tablet) {
         font-size: 16px;
     }
 
@@ -48,10 +52,10 @@ html {
             overflow: hidden;
             position: relative;
             width: 100%;
-            @media only screen and (min-width: 600px) {
+            @media only screen and (min-width: $tablet) {
                 height: 90vh;
             }
-            @media only screen and (min-width: 1024px) {
+            @media only screen and (min-width: $laptop) {
                 height: 96vh;
             }
             &::after {
@@ -66,39 +70,46 @@ html {
                 border-top-right-radius: 50%;
                 border-top-left-radius: 50%;
                 transform: translate(-50%, 50px);
-                @media only screen and (min-width: 600px) {
+                @media only screen and (min-width: $tablet) {
                     border: 60px solid white;
                     transform: translate(-50%, 75px);
                 }
-                @media only screen and (min-width: 1024px) {
+                @media only screen and (min-width: $laptop) {
                     border: 80px solid white;
                     transform: translate(-50%, 100px);
-
                 }
             }
         }
 
         .header {
+            nav {
+                margin-top: $mobile-margin;
+                margin-bottom: $mobile-margin;
+                @media only screen and (min-width: $tablet) {
+                    margin-top: $tablet-margin;
+                    margin-bottom: $tablet-margin;
+                }
+                @media only screen and (min-width: $laptop) {
+                    margin-top: $laptop-margin;
+                    margin-bottom: $laptop-margin;
+                }
+            }
             &--home {
                 @include page-margin;
-                margin-top: $mobile-page-margin;
-                @media only screen and (min-width: 600px) {
-                    margin-top: 32px;
-                }
-                .title-content {
-                    max-width: 444px;
-                    padding-bottom: 64px; // Important for landscape device: retain ideal space between title-content and graphic-wrapper::after
-                }
                 nav {
                     text-align: right;
-                    margin-bottom: 32px;
-                    @media only screen and (min-width: 1024px) {
-                        height: 32px;
-                        button {
+                    @media only screen and (min-width: $laptop) {
+                        height: 53px;
+                        .btn {
                             position: absolute;
-                            right: 52px; // Match page-margins top margin
+                            right: $laptop-margin;
                         }
                     }
+                }
+                .title-content {
+                    margin-top: 32px;
+                    max-width: 444px;
+                    padding-bottom: 64px; // Important for landscape device: retain ideal space between title-content and graphic-wrapper::after
                 }
             }
             &--page {
@@ -111,9 +122,7 @@ html {
                     display: flex;
                         justify-content: space-between;
                         align-items: center;
-                    margin-top: $mobile-page-margin;
-                    margin-bottom: $mobile-page-margin;
-                    @media only screen and (min-width: 1024px) {
+                    @media only screen and (min-width: $laptop) {
                         margin-top: 24px;
                         margin-bottom: 24px;
                     }
@@ -121,7 +130,7 @@ html {
                         font-size: 2rem;
                         font-weight: bold;
                         text-decoration: none;
-                        @media only screen and (min-width: 1024px) {
+                        @media only screen and (min-width: $laptop) {
                             font-size: 3rem;
                         }
                     }
@@ -133,17 +142,18 @@ html {
             @include page-margin;
             margin-top: 32px;
             margin-bottom: 64px;
+            @media only screen and (min-width: $tablet) {
+                margin-top: 100px;
+                margin-bottom: 136px;
+            }
             &--home {
-                margin-top: 18px; // TODO: organise all margin sizes between devices
+                margin-top: 18px;
             }
             
             section {
                 margin-bottom: 2rem;
-                @media only screen and (min-width: 1200px) {
+                @media only screen and (min-width: $largeScreen) {
                     margin-bottom: 56px;
-                }
-                .sub-section{
-                    margin-bottom: 1.3rem;
                 }
             }
         }
@@ -152,17 +162,23 @@ html {
             color: white;
             display: inline-block; // Why doesn't display block work?
             width: 100%;
-            .footer_main-content{ // TODO: rename bedmas or wtf it's called
+            .footer_main-content{
                 @include page-margin;
-                margin-top: $mobile-page-margin;
-                margin-bottom: $mobile-page-margin;
-                @media only screen and (min-width: 600px) {
-                    margin-top: 64px;
-                    margin-bottom: 64px;
+                margin-top: $mobile-margin;
+                margin-bottom: $mobile-margin;
+                @media only screen and (min-width: $tablet) {
+                    margin-top: $tablet-margin;
+                    margin-bottom: $tablet-margin;
                 }
-                @media only screen and (min-width: 1024px) {
-                    margin-top: 64px;
-                    margin-bottom: 64px;
+                @media only screen and (min-width: $laptop) {
+                    margin-top: $laptop-margin;
+                    margin-bottom: $laptop-margin;
+                }
+                @media only screen and (min-width: $largeScreen) {
+                    display: flex;
+                        justify-content: space-between;
+                    margin-top: 146px;
+                    margin-bottom: 146px;
                 }
                 .footer-section{
                     margin-bottom: 24px;
@@ -176,14 +192,21 @@ html {
     background-color: white;
     border: none;
     border-radius: 8px;
+    color: $black;
+    display: inline-block;
     padding: 5px 10px;
     font-family: inherit;
     font-size: 1rem;
     font-weight: 700;
-    @media only screen and (min-width: 600px) {
+    text-decoration: none;
+    @media only screen and (min-width: $tablet) {
         font-size: 1.5rem;
         padding: 12px 20px;
     }
+}
+
+.sub-section{
+    margin-bottom: 1.3rem;
 }
 
 p {
@@ -214,7 +237,7 @@ h4 {
 .heading--page-title {
     font-size: 4rem;
     margin-bottom: 2rem;
-    @media only screen and (min-width: 600px) {
+    @media only screen and (min-width: $tablet) {
         font-size: 6rem;
         margin-bottom: 3rem;
     }
@@ -238,10 +261,10 @@ a {
 // Reduce top margin of text below the graphic since the graphic includes whitespace
 // .text--after-graphic {
 //     margin-top: -10px;
-//     @media only screen and (min-width: 600px) {
+//     @media only screen and (min-width: $tablet) {
 //         margin-top: -20px;
 //     }
-//     @media only screen and (min-width: 1024px) {
+//     @media only screen and (min-width: $laptop) {
 //         margin-top: -40px;
 //     }
 // }

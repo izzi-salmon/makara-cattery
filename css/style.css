@@ -58,15 +58,30 @@ html body .graphic-wrapper::after {
     transform: translate(-50%, 100px);
   }
 }
+html body .header nav {
+  margin-top: 18px;
+  margin-bottom: 18px;
+}
+@media only screen and (min-width: 600px) {
+  html body .header nav {
+    margin-top: 52px;
+    margin-bottom: 52px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  html body .header nav {
+    margin-top: 64px;
+    margin-bottom: 64px;
+  }
+}
 html body .header--home {
   margin-left: 18px;
   margin-right: 18px;
-  margin-top: 18px;
 }
 @media only screen and (min-width: 600px) {
   html body .header--home {
-    margin-left: 64px;
-    margin-right: 64px;
+    margin-left: 52px;
+    margin-right: 52px;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -82,27 +97,22 @@ html body .header--home {
     width: 70vw;
   }
 }
-@media only screen and (min-width: 600px) {
-  html body .header--home {
-    margin-top: 32px;
-  }
-}
-html body .header--home .title-content {
-  max-width: 444px;
-  padding-bottom: 64px;
-}
 html body .header--home nav {
   text-align: right;
-  margin-bottom: 32px;
 }
 @media only screen and (min-width: 1024px) {
   html body .header--home nav {
-    height: 32px;
+    height: 53px;
   }
-  html body .header--home nav button {
+  html body .header--home nav .btn {
     position: absolute;
-    right: 52px;
+    right: 64px;
   }
+}
+html body .header--home .title-content {
+  margin-top: 32px;
+  max-width: 444px;
+  padding-bottom: 64px;
 }
 html body .header--page {
   background-color: #050505;
@@ -116,13 +126,11 @@ html body .header--page nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 18px;
-  margin-bottom: 18px;
 }
 @media only screen and (min-width: 600px) {
   html body .header--page nav {
-    margin-left: 64px;
-    margin-right: 64px;
+    margin-left: 52px;
+    margin-right: 52px;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -162,8 +170,8 @@ html body .main {
 }
 @media only screen and (min-width: 600px) {
   html body .main {
-    margin-left: 64px;
-    margin-right: 64px;
+    margin-left: 52px;
+    margin-right: 52px;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -179,6 +187,12 @@ html body .main {
     width: 70vw;
   }
 }
+@media only screen and (min-width: 600px) {
+  html body .main {
+    margin-top: 100px;
+    margin-bottom: 136px;
+  }
+}
 html body .main--home {
   margin-top: 18px;
 }
@@ -189,9 +203,6 @@ html body .main section {
   html body .main section {
     margin-bottom: 56px;
   }
-}
-html body .main section .sub-section {
-  margin-bottom: 1.3rem;
 }
 html body footer {
   background-color: #050505;
@@ -207,8 +218,8 @@ html body footer .footer_main-content {
 }
 @media only screen and (min-width: 600px) {
   html body footer .footer_main-content {
-    margin-left: 64px;
-    margin-right: 64px;
+    margin-left: 52px;
+    margin-right: 52px;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -226,14 +237,22 @@ html body footer .footer_main-content {
 }
 @media only screen and (min-width: 600px) {
   html body footer .footer_main-content {
-    margin-top: 64px;
-    margin-bottom: 64px;
+    margin-top: 52px;
+    margin-bottom: 52px;
   }
 }
 @media only screen and (min-width: 1024px) {
   html body footer .footer_main-content {
     margin-top: 64px;
     margin-bottom: 64px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  html body footer .footer_main-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 146px;
+    margin-bottom: 146px;
   }
 }
 html body footer .footer_main-content .footer-section {
@@ -244,16 +263,23 @@ html body footer .footer_main-content .footer-section {
   background-color: white;
   border: none;
   border-radius: 8px;
+  color: #050505;
+  display: inline-block;
   padding: 5px 10px;
   font-family: inherit;
   font-size: 1rem;
   font-weight: 700;
+  text-decoration: none;
 }
 @media only screen and (min-width: 600px) {
   .btn {
     font-size: 1.5rem;
     padding: 12px 20px;
   }
+}
+
+.sub-section {
+  margin-bottom: 1.3rem;
 }
 
 p {
