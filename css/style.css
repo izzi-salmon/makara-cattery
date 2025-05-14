@@ -255,19 +255,29 @@ html body footer .footer_main-content {
     margin-bottom: 146px;
   }
 }
-html body footer .footer_main-content .footer-section {
+html body footer .footer_main-content .footer_section {
   margin-bottom: 24px;
+}
+@media only screen and (min-width: 1200px) {
+  html body footer .footer_main-content .footer_section__address {
+    display: none;
+  }
+}
+html body footer .footer_main-content .footer_section__address--largeScreen {
+  display: none;
+}
+@media only screen and (min-width: 1200px) {
+  html body footer .footer_main-content .footer_section__address--largeScreen {
+    display: block;
+  }
 }
 
 .btn {
   background-color: white;
-  border: none;
   border-radius: 8px;
   color: #050505;
   display: inline-block;
   padding: 5px 10px;
-  font-family: inherit;
-  font-size: 1rem;
   font-weight: 700;
   text-decoration: none;
 }

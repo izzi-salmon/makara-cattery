@@ -13,7 +13,6 @@ In progress:
 To do: 
 
 Development
-- Implement responsive footer
 - Review BEM & CSS
 - Accessibility testing
 - Cross browser testing

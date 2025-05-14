@@ -11,7 +11,6 @@ $tablet: 600px;
 $laptop: 1024px;
 $largeScreen: 1200px;
 
-// TODO: name screen break sizes
 @mixin page-margin {
     margin-left: $mobile-margin;
     margin-right: $mobile-margin;
@@ -160,7 +159,7 @@ html {
         footer {
             background-color: $black;
             color: white;
-            display: inline-block; // Why doesn't display block work?
+            display: inline-block;
             width: 100%;
             .footer_main-content{
                 @include page-margin;
@@ -180,8 +179,19 @@ html {
                     margin-top: 146px;
                     margin-bottom: 146px;
                 }
-                .footer-section{
+                .footer_section{
                     margin-bottom: 24px;
+                    &__address {
+                        @media only screen and (min-width: $largeScreen) {
+                            display: none;
+                        }
+                        &--largeScreen {
+                            display: none;
+                            @media only screen and (min-width: $largeScreen) {
+                                display: block;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -190,13 +200,10 @@ html {
 
 .btn {
     background-color: white;
-    border: none;
     border-radius: 8px;
     color: $black;
     display: inline-block;
     padding: 5px 10px;
-    font-family: inherit;
-    font-size: 1rem;
     font-weight: 700;
     text-decoration: none;
     @media only screen and (min-width: $tablet) {
@@ -257,14 +264,3 @@ a {
 .text--grey {
     color: $grey;
 }
-
-// Reduce top margin of text below the graphic since the graphic includes whitespace
-// .text--after-graphic {
-//     margin-top: -10px;
-//     @media only screen and (min-width: $tablet) {
-//         margin-top: -20px;
-//     }
-//     @media only screen and (min-width: $laptop) {
-//         margin-top: -40px;
-//     }
-// }
