@@ -114,6 +114,41 @@ html body .header--home .title-content {
   max-width: 444px;
   padding-bottom: 64px;
 }
+html body .header--home .title-content__heading-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+html body .header--home .title-content__heading-wrapper .logo {
+  height: 104px;
+}
+@media only screen and (min-width: 600px) {
+  html body .header--home .title-content__heading-wrapper .logo {
+    height: 200px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  html body .header--home .title-content__heading-wrapper .logo {
+    height: 300px;
+  }
+}
+html body .header--home .title-content__page-title {
+  font-size: 4rem;
+  margin-right: 24px;
+  margin-bottom: 2rem;
+}
+@media only screen and (min-width: 600px) {
+  html body .header--home .title-content__page-title {
+    font-size: 6rem;
+    margin-right: 48px;
+    margin-bottom: 3rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  html body .header--home .title-content__page-title {
+    margin-right: 68px;
+  }
+}
 html body .header--page {
   background-color: #050505;
   color: white;
@@ -152,13 +187,33 @@ html body .header--page nav {
     margin-bottom: 24px;
   }
 }
-html body .header--page nav .nav_heading {
+html body .header--page nav .home-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+html body .header--page nav .home-link .logo {
+  display: inline;
+  height: 52px;
+}
+@media only screen and (min-width: 600px) {
+  html body .header--page nav .home-link .logo {
+    height: 84px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  html body .header--page nav .home-link .logo {
+    height: 120px;
+  }
+}
+html body .header--page nav .home-link .nav_heading {
   font-size: 2rem;
   font-weight: bold;
+  margin-right: 1rem;
   text-decoration: none;
 }
 @media only screen and (min-width: 1024px) {
-  html body .header--page nav .nav_heading {
+  html body .header--page nav .home-link .nav_heading {
     font-size: 3rem;
   }
 }
@@ -315,17 +370,6 @@ h3 {
 
 h4 {
   font-size: 1rem;
-}
-
-.heading--page-title {
-  font-size: 4rem;
-  margin-bottom: 2rem;
-}
-@media only screen and (min-width: 600px) {
-  .heading--page-title {
-    font-size: 6rem;
-    margin-bottom: 3rem;
-  }
 }
 
 .heading--sub-heading {

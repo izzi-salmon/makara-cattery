@@ -16,7 +16,9 @@ Development
 - Review BEM & CSS
 - Accessibility testing
 - Cross browser testing
+- Cross device testing
 - to do's c:
+- Write terms and conditions document
 
 Domain & hosting
 - Research squarespace CMS
