@@ -259,7 +259,7 @@ html {
     margin-bottom: 1.3rem;
 }
 
-p {
+p, li {
     font-size: 1rem;
     margin-bottom: 8px;
     line-height: 1.5rem;
@@ -267,7 +267,7 @@ p {
 
 h1 {
     font-size: 3rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 3rem;
 }
 
 h2 {
@@ -284,15 +284,19 @@ h4 {
     font-size: 1rem;
 }
 
+ul {
+    margin-bottom: 16px;
+}
+
+a {
+    color: inherit;
+}
+
 .heading--sub-heading {
     color: $grey;
     margin-bottom: 0.8rem;
     font-weight: normal;
     text-transform: uppercase;
-}
-
-a {
-    color: inherit;
 }
 
 .text--grey {

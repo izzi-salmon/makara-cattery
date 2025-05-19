@@ -13,12 +13,16 @@ In progress:
 To do: 
 
 Development
+- Write terms and conditions document
+- Add re-written home blurb
 - Review BEM & CSS
 - Accessibility testing
 - Cross browser testing
 - Cross device testing
 - to do's c:
-- Write terms and conditions document
+- add fav incon
+
+- md to html script
 
 Domain & hosting
 - Research squarespace CMS
