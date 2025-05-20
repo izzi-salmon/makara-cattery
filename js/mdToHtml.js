@@ -5,7 +5,7 @@ window.onload = function() {
   const outputElement = document.getElementById("termsAndConditionsOutput");
 
   // fetch md file and store
-  fetch('./../documents/makara-cattery-terms-and-conditions.md')
+  fetch('./documents/makara-cattery-terms-and-conditions.md')
     .then(response => response.text())
     .then(text => {
       if(text && outputElement) {
