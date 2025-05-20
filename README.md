@@ -1,28 +1,25 @@
 ### Project dev processes
 makarasass = run sass compiler
 
-Currently:
-
-- Change page-margins to only be left & right margins, organise top and bottom margins
-
 In progress:
 
-- Home and pages styling
-- Organise css
+- Write terms and conditions document
 
 To do: 
 
 Development
-- Write terms and conditions document
+
 - Add re-written home blurb
+
+- md to html script
+
+Testing
 - Review BEM & CSS
 - Accessibility testing
 - Cross browser testing
 - Cross device testing
 - to do's c:
 - add fav incon
-
-- md to html script
 
 Domain & hosting
 - Research squarespace CMS
