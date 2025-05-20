@@ -3,15 +3,13 @@ makarasass = run sass compiler
 
 In progress:
 
-- Write terms and conditions document
+- 
 
 To do: 
 
 Development
 
-- Add re-written home blurb
-
-- md to html script
+- 
 
 Testing
 - Review BEM & CSS
