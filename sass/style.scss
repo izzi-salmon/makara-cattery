@@ -1,16 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-$black: #050505;
-$grey: #393737;
-$mobile-margin: 18px;
-$tablet-margin: 52px;
-$laptop-margin: 64px;
-
 // Breakpoint screen sizes
 $tablet: 600px;
 $laptop: 1024px;
 $largeScreen: 1200px;
 
+// Margins
+$mobile-margin: 18px;
+$tablet-margin: 52px;
+$laptop-margin: 64px;
+
+// Colours
+$black: #050505;
+$grey: #393737;
+
+// Side margins for the different break points
 @mixin page-margin {
     margin-left: $mobile-margin;
     margin-right: $mobile-margin;
@@ -41,222 +45,6 @@ html {
     @media only screen and (min-width: $tablet) {
         font-size: 16px;
     }
-
-    body {
-        .graphic-wrapper {
-            color: white;
-            background-color: $black;
-            height: 85vh;
-            min-height: fit-content;
-            overflow: hidden;
-            position: relative;
-            width: 100%;
-            @media only screen and (min-width: $tablet) {
-                height: 90vh;
-            }
-            @media only screen and (min-width: $laptop) {
-                height: 96vh;
-            }
-            &::after {
-                box-sizing: border-box;
-                content: "";
-                position: absolute;
-                bottom: 0;
-                right: 50%;
-                left: 50%;
-                width: 105%;
-                border: 40px solid white;
-                border-top-right-radius: 50%;
-                border-top-left-radius: 50%;
-                transform: translate(-50%, 50px);
-                @media only screen and (min-width: $tablet) {
-                    border: 60px solid white;
-                    transform: translate(-50%, 75px);
-                }
-                @media only screen and (min-width: $laptop) {
-                    border: 80px solid white;
-                    transform: translate(-50%, 100px);
-                }
-            }
-        }
-
-        .header {
-            nav {
-                margin-top: $mobile-margin;
-                margin-bottom: $mobile-margin;
-                @media only screen and (min-width: $tablet) {
-                    margin-top: $tablet-margin;
-                    margin-bottom: $tablet-margin;
-                }
-                @media only screen and (min-width: $laptop) {
-                    margin-top: $laptop-margin;
-                    margin-bottom: $laptop-margin;
-                }
-            }
-            &--home {
-                @include page-margin;
-                nav {
-                    text-align: right;
-                    @media only screen and (min-width: $laptop) {
-                        height: 53px;
-                        .btn {
-                            position: absolute;
-                            right: $laptop-margin;
-                        }
-                    }
-                }
-                .title-content {
-                    margin-top: 32px;
-                    max-width: 444px;
-                    padding-bottom: 64px; // Important for landscape device: retain ideal space between title-content and graphic-wrapper::after
-                    &__heading-wrapper {
-                        display: flex;
-                            justify-content: flex-start;
-                            align-items: center;
-                        .logo {
-                            height: 104px;
-                            @media only screen and (min-width: $tablet) {
-                                height: 200px;
-                            }
-                            @media only screen and (min-width: $laptop) {
-                                height: 300px;
-                            }
-                        }
-                    }
-                    &__page-title { // TODO: this class is no longer needed
-                        font-size: 4rem;
-                        margin-right: 24px;
-                        margin-bottom: 2rem;
-                        @media only screen and (min-width: $tablet) {
-                            font-size: 6rem;
-                            margin-right: 48px;
-                            margin-bottom: 3rem;
-                        }
-                        @media only screen and (min-width: $laptop) {
-                            margin-right: 68px;
-                        }
-                    }
-                }
-            }
-            &--page {
-                background-color: $black;
-                color: white;
-                display: inline-block;
-                width: 100%;
-                nav {
-                    @include page-margin;
-                    display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                    @media only screen and (min-width: $laptop) {
-                        margin-top: 24px;
-                        margin-bottom: 24px;
-                    }
-                    .home-link {
-                        display: flex;
-                            align-items: center;
-                        text-decoration: none;
-                        .logo {
-                            display: inline;
-                            height: 52px;
-                            @media only screen and (min-width: $tablet) {
-                                height: 84px;
-                            }
-                            @media only screen and (min-width: $laptop) {
-                                height: 120px;
-                            }
-                        }
-                        .nav_heading {
-                            font-size: 2rem;
-                            font-weight: bold;
-                            margin-right: 1rem;
-                            text-decoration: none;
-                            @media only screen and (min-width: $laptop) {
-                                font-size: 3rem;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        .main {
-            @include page-margin;
-            margin-top: 32px;
-            margin-bottom: 64px;
-            @media only screen and (min-width: $tablet) {
-                margin-top: 100px;
-                margin-bottom: 136px;
-            }
-            &--home {
-                margin-top: 18px;
-            }
-            
-            section {
-                margin-bottom: 2rem;
-                @media only screen and (min-width: $largeScreen) {
-                    margin-bottom: 56px;
-                }
-            }
-        }
-        footer {
-            background-color: $black;
-            color: white;
-            display: inline-block;
-            width: 100%;
-            .footer_main-content{
-                @include page-margin;
-                margin-top: $mobile-margin;
-                margin-bottom: $mobile-margin;
-                @media only screen and (min-width: $tablet) {
-                    margin-top: $tablet-margin;
-                    margin-bottom: $tablet-margin;
-                }
-                @media only screen and (min-width: $laptop) {
-                    margin-top: $laptop-margin;
-                    margin-bottom: $laptop-margin;
-                }
-                @media only screen and (min-width: $largeScreen) {
-                    display: flex;
-                        justify-content: space-between;
-                    margin-top: 146px;
-                    margin-bottom: 146px;
-                }
-                .footer_section{
-                    margin-bottom: 24px;
-                    &__address {
-                        @media only screen and (min-width: $largeScreen) {
-                            display: none;
-                        }
-                        &--largeScreen {
-                            display: none;
-                            @media only screen and (min-width: $largeScreen) {
-                                display: block;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-.btn {
-    background-color: white;
-    border-radius: 8px;
-    color: $black;
-    display: inline-block;
-    padding: 5px 10px;
-    font-weight: 700;
-    text-decoration: none;
-    @media only screen and (min-width: $tablet) {
-        font-size: 1.5rem;
-        padding: 12px 20px;
-    }
-}
-
-.sub-section{
-    margin-bottom: 1.3rem;
 }
 
 p, li {
@@ -292,7 +80,25 @@ a {
     color: inherit;
 }
 
-.heading--sub-heading {
+.btn {
+    background-color: white;
+    border-radius: 8px;
+    color: $black;
+    display: inline-block;
+    padding: 5px 10px;
+    font-weight: 700;
+    text-decoration: none;
+    @media only screen and (min-width: $tablet) {
+        font-size: 1.5rem;
+        padding: 12px 20px;
+    }
+}
+
+.sub-section{
+    margin-bottom: 1.3rem;
+}
+
+.sub-heading {
     color: $grey;
     margin-bottom: 0.8rem;
     font-weight: normal;
@@ -301,4 +107,201 @@ a {
 
 .text--grey {
     color: $grey;
+}
+
+.graphic-wrapper {
+    color: white;
+    background-color: $black;
+    height: 85vh;
+    min-height: fit-content;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    @media only screen and (min-width: $tablet) {
+        height: 90vh;
+    }
+    @media only screen and (min-width: $laptop) {
+        height: 96vh;
+    }
+    &::after {
+        box-sizing: border-box;
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 50%;
+        left: 50%;
+        width: 105%;
+        border: 40px solid white;
+        border-top-right-radius: 50%;
+        border-top-left-radius: 50%;
+        transform: translate(-50%, 50px);
+        @media only screen and (min-width: $tablet) {
+            border: 60px solid white;
+            transform: translate(-50%, 75px);
+        }
+        @media only screen and (min-width: $laptop) {
+            border: 80px solid white;
+            transform: translate(-50%, 100px);
+        }
+    }
+}
+
+.header {
+    .nav {
+        margin-top: $mobile-margin;
+        margin-bottom: $mobile-margin;
+        @media only screen and (min-width: $tablet) {
+            margin-top: $tablet-margin;
+            margin-bottom: $tablet-margin;
+        }
+        @media only screen and (min-width: $laptop) {
+            margin-top: $laptop-margin;
+            margin-bottom: $laptop-margin;
+        }
+    }
+    &--home {
+        @include page-margin;
+        nav {
+            text-align: right;
+            @media only screen and (min-width: $laptop) {
+                height: 53px;
+                .btn {
+                    position: absolute;
+                    right: $laptop-margin;
+                }
+            }
+        }
+    }
+    &--page {
+        background-color: $black;
+        color: white;
+        display: inline-block;
+        width: 100%;
+        .nav {
+            @include page-margin;
+            display: flex;
+                justify-content: space-between;
+                align-items: center;
+            @media only screen and (min-width: $laptop) {
+                margin-top: 24px;
+                margin-bottom: 24px;
+            }
+            &__homepage-link {
+                display: flex;
+                    align-items: center;
+                text-decoration: none;
+            }
+            &__logo {
+                display: inline;
+                height: 52px;
+                @media only screen and (min-width: $tablet) {
+                    height: 84px;
+                }
+                @media only screen and (min-width: $laptop) {
+                    height: 120px;
+                }
+            }
+            &__heading {
+                font-size: 2rem;
+                font-weight: bold;
+                margin-right: 1rem;
+                text-decoration: none;
+                @media only screen and (min-width: $laptop) {
+                    font-size: 3rem;
+                }
+            }
+        }
+    }
+    .blurb {
+            margin-top: 32px;
+            max-width: 444px;
+            padding-bottom: 64px; // Important for landscape device: retain ideal space between title-content and graphic-wrapper::after
+            &__heading-wrapper {
+                display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+            }
+            &__title {
+                font-size: 4rem;
+                margin-right: 24px;
+                margin-bottom: 2rem;
+                @media only screen and (min-width: $tablet) {
+                    font-size: 6rem;
+                    margin-right: 48px;
+                    margin-bottom: 3rem;
+                }
+                @media only screen and (min-width: $laptop) {
+                    margin-right: 68px;
+                }
+            }
+            &__logo {
+                height: 104px;
+                @media only screen and (min-width: $tablet) {
+                    height: 200px;
+                }
+                @media only screen and (min-width: $laptop) {
+                    height: 300px;
+                }
+            }
+        }
+}
+
+.main {
+    @include page-margin;
+    margin-top: 32px;
+    margin-bottom: 64px;
+    @media only screen and (min-width: $tablet) {
+        margin-top: 100px;
+        margin-bottom: 136px;
+    }
+    &--home {
+        margin-top: 18px;
+    }
+    
+    section {
+        margin-bottom: 2rem;
+        @media only screen and (min-width: $largeScreen) {
+            margin-bottom: 56px;
+        }
+    }
+}
+
+.footer {
+    background-color: $black;
+    color: white;
+    display: inline-block;
+    width: 100%;
+    &__main-content {
+        @include page-margin;
+        margin-top: $mobile-margin;
+        margin-bottom: $mobile-margin;
+        @media only screen and (min-width: $tablet) {
+            margin-top: $tablet-margin;
+            margin-bottom: $tablet-margin;
+        }
+        @media only screen and (min-width: $laptop) {
+            margin-top: $laptop-margin;
+            margin-bottom: $laptop-margin;
+        }
+        @media only screen and (min-width: $largeScreen) {
+            display: flex;
+                justify-content: space-between;
+            margin-top: 146px;
+            margin-bottom: 146px;
+        }
+        .footer-section {
+            margin-bottom: 24px;
+            &__address {
+                @media only screen and (min-width: $largeScreen) {
+                    display: none;
+                }
+                &--largeScreen {
+                    display: none;
+                    @media only screen and (min-width: $largeScreen) {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
 }
