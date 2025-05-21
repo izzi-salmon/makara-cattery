@@ -3,16 +3,16 @@ makarasass = run sass compiler
 
 In progress:
 
-- 
+- Review BEM & CSS
 
 To do: 
 
 Development
 
-- 
+- serve minified js
+- Add SEO
 
 Testing
-- Review BEM & CSS
 - Accessibility testing
 - Cross browser testing
 - Cross device testing
@@ -20,9 +20,6 @@ Testing
 - add fav incon
 
 Domain & hosting
-- Research squarespace CMS
-- Purchase domain
-- set up squarespace
 - set up Instagram integration
 - implement Instagram integration styling
 - set up map integration
