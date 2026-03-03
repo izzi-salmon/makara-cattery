@@ -12,6 +12,7 @@ Pricing:
 * $25 per cat, per calendar day – December to January (Christmas period) 2025-2026
 
 Per calendar day means each single dated day the cat is in the cattery, including the day of drop off and the day of pick up. It *does not* mean per night, or per 24 hour period that spans multiple dates. For example, a stay commencing on Friday 1st and finishing on Sunday 3rd, would be 3x calendar days: Friday 1st, Saturday 2nd, and Sunday 3rd.
+
 During the Christmas period, a minimum charge of 10 days per cat applies. You are not required to stay the full 10 days; however, a minimum charge of $250 per cat will still apply.
 
 Payment Terms:
