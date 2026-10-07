@@ -1,6 +1,10 @@
 ### Project dev processes
 makarasass = run sass compiler
 
+Bugs:
+- Fix homepage layout womp womp
+- Fix /- on t's & c's (md isssue?)
+
 In progress:
 
 - Review BEM & CSS
@@ -11,13 +15,13 @@ Development
 
 - serve minified js
 - Add SEO
+- Add icon
 
 Testing
 - Accessibility testing
 - Cross browser testing
 - Cross device testing
 - to do's c:
-- add fav incon
 
 Domain & hosting
 - set up Instagram integration
@@ -27,6 +31,8 @@ Domain & hosting
 
 Booking system
 - research booking system ;-;
+- research email login with code service
+- build booking system
 
 Notes:
 
